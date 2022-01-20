@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+body { margin: 0;
+	background-image: url(grid.jpg);
+	perspective: 1700px;
+	perspective-origin: 500px 800px;
+}
+
+#zad2  {
+    width: 800px;
+    height: 600px;
+    margin: 99px;
+    background-color: aquamarine;
+    border: 1px dotted black;
+	animation: okretaj 10s linear 10s forwards;
+	transform-style: preserve-3d;	
+}
+
+
+.p1{
+	transform: skew(20deg);
+}
+
+.p2{
+	transform: skew(-20deg);
+}
+.p3{
+	transform: skew(20deg);
+}
+.p4{
+	transform: skew(-20deg);
+}
+
+#zad2 div {	
+	width: 200px;
+	height: 200px;
+	opacity: .6;
+	
+	
+}
+
+#zad2 div:nth-child(1){
+	background-color:red;
+	margin-top: 0px;
+	margin-left:   300px;
+	animation: a1 1s 8s forwards;
+	transform-origin: bottom;
+}
+
+@keyframes a1{
+	to{transform: rotateX(-90deg)}
+}
+
+#zad2 div:nth-child(2){
+	background-color:mediumpurple;	
+	margin-left:   100px;
+	animation: a2 1s 2s forwards;
+	transform-origin: right;
+}
+
+@keyframes a2{
+	to{transform: rotateY(90deg)}
+}
+#zad2 div:nth-child(3){
+	background-color:darkslategray;	
+	margin-left:   300px;
+	animation: a3 1s 4s forwards;
+	transform-origin: top;
+
+}
+@keyframes a3{
+	to{transform: rotateX(90deg)}
+}
+
+#zad2 div:nth-child(4){
+	background-color:yellow;
+	margin-left:   500px;
+	margin-top: -400px;
+	animation: a4 1s 6s forwards;
+	transform-origin: left;
+}
+@keyframes a4{
+	to{transform: rotateY(-90deg)}
+}
+
+
+@keyframes okretaj{	
+0% {transform:rotateX(0deg) rotateY(0deg);}
+25% {transform:rotateX(90deg) rotateY(45deg);}
+50%	{transform:rotateX(-30deg) rotateY(90deg);}
+100% {transform:rotateX(45deg) rotateY(-10deg);}
+}
+
+
+/******************************/
+
+#zad1  { 
+	margin: 50px; 
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+
+#zad1 div {	
+	width: 370px;
+	height: 147px;
+	font: italic 40px Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace"; 
+	 border: 2px double #8A8A8A;
+	box-shadow: 4px 4px 4px black;
+	margin-Left: 50px; 
+	background-color: darkcyan;
+	text-align: center;
+	
+}
+
+
+#zad1 div:first-child{
+	background-color:darkslateblue;
+	color: beige;
+	animation: anim1 2s ease-out 2s forwards, anim3 2s linear 4s  forwards, anim4 2s linear 6s forwards;
+    backface-visibility: hidden;
+}
+
+		
+#zad1 div:last-child{
+	 background-color: purple; 
+	color: magenta; 
+	animation:  anim2 2s linear 4s forwards;
+	
+	
+}
+@keyframes anim1 {
+	 to {transform: translateX(-422px) }
+		 
+	
+}
+@keyframes anim2{
+	
+	to {transform: rotateX(180deg);}
+		
+	}
+
+@keyframes anim3{
+	from {transform: rotateX(180deg);}
+	to {transform: rotateX(180deg)}
+}
+
+@keyframes anim4{
+	from{transform: rotateX(180deg)}
+	to{transform: rotateX(180deg)}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
